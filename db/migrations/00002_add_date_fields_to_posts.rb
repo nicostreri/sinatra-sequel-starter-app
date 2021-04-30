@@ -1,7 +1,7 @@
 Sequel.migration do
   up do
-    add_column :posts, :created_at, DateTime
-    add_column :posts, :updated_at, DateTime
+    add_column :posts, :created_at, DateTime, default: Sequel::CURRENT_TIMESTAMP
+    add_column :posts, :updated_at, DateTime, default: Sequel::CURRENT_TIMESTAMP
   end
 
   down do
